@@ -1,0 +1,175 @@
+/* Start Global Rulse */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Cairo", sans-serif;
+    font-weight: bold;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    text-decoration: none;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rulse */
+/* Start Header */
+.cv .container > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-weight: 900;
+}
+/* End Header */
+/* Start Contact */
+.cv .contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.cv .contact .info i {
+    margin-right: 10px;
+}
+.cv .contact .info span {
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+/* End Contact */
+/* Start Objective */
+.cv .objective {
+    margin: 50px 50px 0;
+    padding: 0;
+}
+.cv .objective h3 {
+    font-weight: 900;
+    margin-bottom: 0;
+}
+.cv .objective p {
+    margin: 0 20px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+/* End Objective */
+/* Start Training */
+.cv .training {
+    margin: 50px 50px 0;
+    padding: 0;
+}
+.cv .training h3 {
+    font-weight: 900;
+    margin-bottom: 0;
+}
+.cv .training ul li {
+    margin-bottom: 20px;
+}
+.cv .training ul li p {
+    padding-left: 20px;
+    line-height: 1.8;
+    font-weight: 500;
+    margin: 10px 0;
+}
+/* End Training */
+/* Start Experience */
+.cv .experience {
+    margin: 50px 50px 0;
+    padding: 0;
+}
+.cv .experience h3 {
+    font-weight: 900;
+    margin-bottom: 0;
+}
+.cv .experience ul li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cv .experience ol {
+    counter-reset: item;
+    list-style-type: none;
+}
+.cv .experience ol li {
+    position: relative;
+    counter-increment: item;
+    font-weight: 500;
+}
+.cv .experience ol li::before {
+    content: counter(item) ". ";
+    position: absolute;
+    left: -20px;
+    font-weight: 800;
+}
+/* End Experience */
+/* Start Skills */
+.cv .skills {
+    margin: 50px 50px 0;
+    padding: 0;
+}
+.cv .skills h3 {
+    font-weight: 900;
+    margin-bottom: 0;
+}
+.cv .skills ul li {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.cv .skills ul li span {
+    font-weight: bold;
+}
+/* End Skills */
+/* Start Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+/* End Footer */
+
+/* Start Print */
+@page {
+    size: A4;
+    margin: 5mm; /* تقليل الهامش */
+}
+@media print {
+    body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 5mm; /* إضافة بعض الحشو لتجنب القطع القريب من الحافة */
+        font-size: 12px; /* تصغير حجم الخط */
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+}
+/* End Print */
