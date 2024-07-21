@@ -17,9 +17,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-a {
-    text-decoration: none;
-}
 li {
     line-height: 1.5;
 }
@@ -65,6 +62,12 @@ li {
         margin-top: 30px;
     }
 }
+@media print {
+    .cv .container > h1 {
+        font-size: 20px;
+        margin: 0;
+    }
+}
 /* End Header */
 /* Start Contact */
 .cv .contact {
@@ -79,12 +82,20 @@ li {
         gap: 30px;
     }
 }
+@media print {
+    .cv .contact {
+        flex-direction: row;
+    }
+}
 .cv .contact .info i {
     margin-right: 10px;
+    font-size: 20px;
 }
 .cv .contact .info span {
-    font-weight: 900;
     letter-spacing: 1px;
+}
+.cv .contact span a {
+    color: blue;
 }
 /* End Contact */
 /* Start Objective */
@@ -172,20 +183,37 @@ li {
     font-weight: bold;
 }
 /* End Skills */
+/* Start Summary */
+.cv .summary {
+    margin: 50px 50px 0;
+    padding: 0;
+}
+.cv .summary h3 {
+    font-weight: 900;
+    margin-bottom: 0;
+}
+.cv .summary p {
+    padding-left: 20px;
+    line-height: 1.8;
+    font-weight: 500;
+    margin: 10px 0;
+}
+/* End Summary */
 /* Start Footer */
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px auto;
+    margin: 30px auto 10px;
 }
 /* End Footer */
 
 /* Start Print */
 @page {
     size: A4;
-    margin: 5mm; /* تقليل الهامش */
+    margin: 0mm; /* تقليل الهامش */
 }
+
 @media print {
     body {
         width: 210mm;
